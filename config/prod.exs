@@ -15,7 +15,8 @@ config :personal_twitter_bot, PersonalTwitterBot.Endpoint,
   http: [port: 8888],
   url: [host: "home.peterhamilton.info", port: 80],
   cache_static_manifest: "priv/static/manifest.json",
-  server: true
+  server: true,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -56,7 +57,3 @@ config :logger, level: :info
 #
 #     config :personal_twitter_bot, PersonalTwitterBot.Endpoint, server: true
 #
-
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
