@@ -1,5 +1,7 @@
 # PersonalTwitterBot
 
+Nice little REEP stack app for managing your twitter account.
+
 To start your Phoenix app:
 
   1. Install dependencies with `mix deps.get`
