@@ -19,7 +19,7 @@ defmodule PersonalTwitterBot.Mixfile do
   def application do
     [mod: {PersonalTwitterBot, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :rethinkdb, :extwitter]]
+                    :phoenix_ecto, :rethinkdb, :extwitter, :oauth]]
   end
 
   # Specifies which paths to compile per environment.
