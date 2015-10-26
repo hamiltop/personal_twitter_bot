@@ -32,11 +32,4 @@ config :logger, :console, format: "[$level] $message\n"
 # and calculating stacktraces is usually expensive.
 config :phoenix, :stacktrace_depth, 20
 
-# Configure your database
-config :personal_twitter_bot, PersonalTwitterBot.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "personal_twitter_bot_dev",
-  hostname: "localhost",
-  pool_size: 10
+import_config "dev.secret.exs"

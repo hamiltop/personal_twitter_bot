@@ -19,7 +19,7 @@ defmodule PersonalTwitterBot.Mixfile do
   def application do
     [mod: {PersonalTwitterBot, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :rethinkdb]]
+                    :phoenix_ecto, :rethinkdb, :extwitter]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,6 +36,8 @@ defmodule PersonalTwitterBot.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
+     {:oauth, github: "tim/erlang-oauth"},
+     {:extwitter, "~> 0.5.1"},
      {:exrm, "~> 0.19.9"}]
   end
 

@@ -1,4 +1,7 @@
 <div class="jumbotron">
   <h2>Welcome to Personal Twitter Bot</h2>
   <p class="lead">Twitter doesn't have to be time consuming.</p>
+  <%= for tweet <- @tweets do %>
+    <p><%= tweet %></p>
+  <%= end %>
 </div>
