@@ -27,5 +27,8 @@
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <footer>
+    Version <%= :application.get_key(:personal_twitter_bot, :vsn) |> elem(1) %>
+    </footer>
   </body>
 </html>
