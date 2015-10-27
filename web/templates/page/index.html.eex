@@ -4,4 +4,9 @@
   <%= for tweet <- @tweets do %>
     <p><%= tweet %></p>
   <%= end %>
+
+  <%= case @count do %>
+    <% nil -> %> No tweets in database
+    <% _ -> %> <p>Found <%= @count %> tweets in database</p>
+  <% end %>
 </div>
