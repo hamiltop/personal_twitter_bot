@@ -32,13 +32,16 @@ defmodule PersonalTwitterBot.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.0.3"},
      {:phoenix_ecto, "~> 1.1"},
-     {:rethinkdb, github: "hamiltop/rethinkdb-elixir"},
+     {:rethinkdb, github: "hamiltop/rethinkdb-elixir", override: true},
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:oauth, github: "tim/erlang-oauth"},
      {:extwitter, "~> 0.5.1"},
-     {:exrm, "~> 0.19.9"}]
+     {:exrm, "~> 0.19.9"},
+     {:stream_runner, "~> 1.0"},
+     {:rethinkdb_ecto, path: "../rethinkdb_ecto"}
+    ]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

@@ -1,0 +1,6 @@
+<h2>Edit filter</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: filter_path(@conn, :update, @filter) %>
+
+<%= link "Back", to: filter_path(@conn, :index) %>

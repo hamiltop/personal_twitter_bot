@@ -20,7 +20,8 @@ defmodule PersonalTwitterBot do
     children = [
       # Start the endpoint when the application starts
       supervisor(PersonalTwitterBot.Endpoint, []),
-      worker(Database, [])
+      worker(Database, []),
+      worker(TwitterStream, ["apple"])
       # Here you could define other workers and supervisors as children
       # worker(PersonalTwitterBot.Worker, [arg1, arg2, arg3]),
     ]

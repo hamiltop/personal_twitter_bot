@@ -14,6 +14,12 @@ config :personal_twitter_bot, PersonalTwitterBot.Endpoint,
   check_origin: false,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
 
+config :personal_twitter_bot, PersonalTwitterBot.Repo,
+  adapter: PersonalTwitterBot.RethinkDB.Adapter,
+  database: "ecto_simple",
+  username: "postgres",
+  password: "postgres"
+
 # Watch static and templates for browser reloading.
 config :personal_twitter_bot, PersonalTwitterBot.Endpoint,
   live_reload: [

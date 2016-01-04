@@ -25,7 +25,8 @@
   "providers": {:hex, :providers, "1.4.1"},
   "ranch": {:hex, :ranch, "1.1.0"},
   "relx": {:hex, :relx, "3.5.0"},
-  "rethinkdb": {:git, "https://github.com/hamiltop/rethinkdb-elixir.git", "ba21f57192ae6df8b002580faff51e200d2e9249", []},
+  "rethinkdb": {:git, "https://github.com/hamiltop/rethinkdb-elixir.git", "651095e823d910fca3b6511e7263ea7c4b5d906c", []},
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"},
+  "stream_runner": {:hex, :stream_runner, "1.1.0"},
   "timex": {:hex, :timex, "0.19.5"},
   "tzdata": {:hex, :tzdata, "0.5.4"}}

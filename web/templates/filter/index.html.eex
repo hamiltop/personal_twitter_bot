@@ -1,0 +1,26 @@
+<h2>Listing filters</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Term</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for filter <- @filters do %>
+    <tr>
+      <td><%= filter.term %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: filter_path(@conn, :show, filter), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: filter_path(@conn, :edit, filter), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: filter_path(@conn, :delete, filter), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New filter", to: filter_path(@conn, :new) %>
